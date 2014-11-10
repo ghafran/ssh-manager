@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[PseudoTerminal windowDidResize:]:PseudoTerminal.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "win.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "-[PseudoTerminal finishInitializationWithSmartLayout:windowType:savedWindowType:screen:isHotkey:]:PseudoTerminal.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[self window]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "iTerm2.ConnectionView.addConn (iTerm2.ConnectionView)() -&gt; ():ConnectionView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "deleg as ConnectionViewDelegate">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
