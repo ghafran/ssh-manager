@@ -18,5 +18,10 @@ extension NSTextView
         self.scrollRangeToVisible(NSMakeRange(self.string!.utf16Count, 0)) //same as countElements or countCharacters
     }
     
-    
+}
+
+func getMyPath() -> NSString
+{
+    var myPath:NSString = NSFileManager.defaultManager().currentDirectoryPath
+    return myPath
 }

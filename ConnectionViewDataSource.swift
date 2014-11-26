@@ -24,20 +24,35 @@ class ConnectionViewDataSource: NSObject, NSOutlineViewDataSource
         self.items = []
        
         super.init()
-      
-        holder.count = 1
         
-        var root1 = ConnectionViewItem()
-        root1.name = "VPS"
+        if (holder.count == 0)
+        {
+            var saveFile:String = "sshtree.drt"
+            var path = getMyPath() + "/" + saveFile
+            if (NSFileManager.defaultManager().fileExistsAtPath((path)) == true)
+            {
+                var data = NSKeyedUnarchiver.unarchiveObjectWithFile(saveFile) as NSMutableArray
+                
+                self.items.removeAllObjects()
+                
+                for elem in data {
+                    self.items.addObject(elem as ConnectionViewItem)
+                }
+            }
+
+            holder.count = 1
+        }
         
-        var ci : ConnectionViewItem
+        else {
+            holder.count = 1
         
-        ci = root1.add("Pre-Production")
+            var root1 = ConnectionViewItem()
+            root1.name = ""
         
-        ci.add("no37.ro")
-    
-        self.items.addObject(root1)
-       
+            self.items.addObject(root1)
+            root1.folder = true
+            root1.icon = NSImage(named: "folder_icon")
+        }
     }
 
     func printItem(item:ConnectionViewItem)

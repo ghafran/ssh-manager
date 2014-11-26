@@ -1237,7 +1237,7 @@
 		4ED1BA8719F408DA00A9A37D /* ConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BA8619F408DA00A9A37D /* ConnectionView.swift */; };
 		4ED1BA8B19F4090D00A9A37D /* TaskHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BA8A19F4090D00A9A37D /* TaskHandler.swift */; };
 		4ED1BA8D19F4092100A9A37D /* TaskItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BA8C19F4092100A9A37D /* TaskItem.swift */; };
-		4ED1BA8F19F4093300A9A37D /* UiUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BA8E19F4093300A9A37D /* UiUtils.swift */; };
+		4ED1BA8F19F4093300A9A37D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED1BA8E19F4093300A9A37D /* Utils.swift */; };
 		5ECE005F1454E59B004861E9 /* PseudoTerminalRestorer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5ECE005D1454E59B004861E9 /* PseudoTerminalRestorer.h */; };
 		5ECE00601454E59B004861E9 /* PseudoTerminalRestorer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ECE005E1454E59B004861E9 /* PseudoTerminalRestorer.m */; };
 		5ECE4AE814513F05002A9CC2 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5ECE4AC41451343E002A9CC2 /* Growl.framework */; };
@@ -2109,7 +2109,7 @@
 		4ED1BA8619F408DA00A9A37D /* ConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionView.swift; sourceTree = "<group>"; };
 		4ED1BA8A19F4090D00A9A37D /* TaskHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskHandler.swift; sourceTree = "<group>"; };
 		4ED1BA8C19F4092100A9A37D /* TaskItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskItem.swift; sourceTree = "<group>"; };
-		4ED1BA8E19F4093300A9A37D /* UiUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiUtils.swift; sourceTree = "<group>"; };
+		4ED1BA8E19F4093300A9A37D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		5ECE005D1454E59B004861E9 /* PseudoTerminalRestorer.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.h; path = PseudoTerminalRestorer.h; sourceTree = "<group>"; tabWidth = 4; };
 		5ECE005E1454E59B004861E9 /* PseudoTerminalRestorer.m */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 4; lastKnownFileType = sourcecode.c.objc; path = PseudoTerminalRestorer.m; sourceTree = "<group>"; tabWidth = 4; };
 		5ECE4AC41451343E002A9CC2 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
@@ -2537,7 +2537,7 @@
 				4ED1BA8219F4087900A9A37D /* ConnectionViewItem.swift */,
 				4ED1BA8A19F4090D00A9A37D /* TaskHandler.swift */,
 				4ED1BA8C19F4092100A9A37D /* TaskItem.swift */,
-				4ED1BA8E19F4093300A9A37D /* UiUtils.swift */,
+				4ED1BA8E19F4093300A9A37D /* Utils.swift */,
 				A663011C19CFE64B004AF81C /* AboutWindow.xib */,
 				0464AB0E006CD2EC7F000001 /* Classes */,
 				1DD39AD5180B8118004E56D5 /* Frameworks */,
@@ -5260,7 +5260,7 @@
 				1D5FDDBF1208E93600C46BA3 /* PSMRolloverButton.m in Sources */,
 				A68A30DE186D1429007F550F /* SCPPath.m in Sources */,
 				1D5FDDC01208E93600C46BA3 /* PSMTabBarCell.m in Sources */,
-				4ED1BA8F19F4093300A9A37D /* UiUtils.swift in Sources */,
+				4ED1BA8F19F4093300A9A37D /* Utils.swift in Sources */,
 				1D5FDDC11208E93600C46BA3 /* PSMTabBarControl.m in Sources */,
 				A647E3B318C36D0300450FA1 /* VT100Token.m in Sources */,
 				A6E713BB18FCCDD1008D94DD /* iTermURLSchemeController.m in Sources */,
