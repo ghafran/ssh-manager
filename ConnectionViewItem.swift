@@ -44,6 +44,15 @@ class ConnectionViewItem: NSObject, NSCoding
         super.init()
         loadWithCoder(coder: aDecoder)
     }
+    
+    override func isEqual(anObject: AnyObject?) -> Bool
+    {
+        if ((anObject as ConnectionViewItem).name == self.name) {
+            return true
+        }
+        return false
+    }
+
 
     override init()
     {
@@ -168,7 +177,7 @@ class ConnectionViewItem: NSObject, NSCoding
         
         return (other as ConnectionViewItem).name.compare((first as ConnectionViewItem).name)
     }
-
+    
     func add(var child:ConnectionViewItem, var folder:Bool=false) -> ConnectionViewItem
     {
         child.parent = self
@@ -184,6 +193,19 @@ class ConnectionViewItem: NSObject, NSCoding
         self.children.addObject(child)
         
         return child
+    }
+    
+    func deleteItem(var item:ConnectionViewItem)
+    {
+        if (self.name == item.name) {
+            self.parent!.children.removeObject(item)
+            self.parent = nil
+
+            return
+        }
+        for child in item.children {
+            deleteItem(child as ConnectionViewItem)
+        }
     }
     
     func add(var name:String, user:NSString="", port:NSString="", key:NSString="", host:NSString="") -> ConnectionViewItem

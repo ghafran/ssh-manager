@@ -262,6 +262,7 @@ public class ConnectionView: NSOutlineView
         var item2:NSMenuItem? = nil;
         var item3:NSMenuItem? = nil;
         var item4:NSMenuItem? = nil;
+        var delItem:NSMenuItem? = nil
 
         var saveConfigItem:NSMenuItem? = nil
         var loadConfigItem:NSMenuItem? = nil
@@ -272,18 +273,20 @@ public class ConnectionView: NSOutlineView
 
 
         item3 = theMenu.insertItemWithTitle("Add folder", action:"addFolder", keyEquivalent:"", atIndex:1)
-       
         
-          if (item.folder == false) {
-             item2 = theMenu.insertItemWithTitle("Edit connection", action:"editConn", keyEquivalent:"", atIndex:2)
+        
+        if (item.folder == false) {
+            item2 = theMenu.insertItemWithTitle("Edit connection", action:"editConn", keyEquivalent:"", atIndex:2)
+            delItem = theMenu.insertItemWithTitle("Delete connection", action: "deleteConn", keyEquivalent: "", atIndex: 3)
         }
 
         else {
             item4 = theMenu.insertItemWithTitle("Edit folder", action:"editFolder", keyEquivalent:"", atIndex:2)
+            delItem = theMenu.insertItemWithTitle("Delete folder", action: "deleteConn", keyEquivalent: "", atIndex: 3)
         }
         
-         saveConfigItem = theMenu.insertItemWithTitle("Save config", action:"saveConfig", keyEquivalent:"", atIndex:3)
-        loadConfigItem = theMenu.insertItemWithTitle("Load config", action:"loadConfig", keyEquivalent:"", atIndex:4)
+        saveConfigItem = theMenu.insertItemWithTitle("Save config", action:"saveConfig", keyEquivalent:"", atIndex:4)
+        loadConfigItem = theMenu.insertItemWithTitle("Load config", action:"loadConfig", keyEquivalent:"", atIndex:5)
 
     //item1!.target = self;
      //   item2!.target = self;
@@ -297,6 +300,14 @@ public class ConnectionView: NSOutlineView
        
         
         return theMenu;
+    }
+    
+    func deleteConn()
+    {
+        var ds:ConnectionViewDataSource = self.dataSource() as ConnectionViewDataSource
+        var selectedItem = self.itemAtRow(self.row) as ConnectionViewItem!
+        ds.deleteItem(selectedItem)
+        self.reloadData()
     }
     
     func saveConfig() {

@@ -440,13 +440,15 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "15"
-            endingLineNumber = "15">
+            endingLineNumber = "15"
+            landmarkName = "ConnectionViewDelegate"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewDelegate.swift"
@@ -454,7 +456,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
-            endingLineNumber = "77">
+            endingLineNumber = "77"
+            landmarkName = "outlineViewSelectionDidChange(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -496,13 +500,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "437259734.199251"
+            timestampString = "438726774.16923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "341"
-            endingLineNumber = "341"
-            landmarkName = "ConnectionView"
-            landmarkType = "3">
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "addConn()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -512,12 +516,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "437259734.199251"
+            timestampString = "438726774.16923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
-            landmarkName = "editConn()"
+            startingLineNumber = "345"
+            endingLineNumber = "345"
+            landmarkName = "addConn()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -700,7 +704,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
@@ -709,7 +713,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "302"
             endingLineNumber = "302"
-            landmarkName = "saveConfig()"
+            landmarkName = "defaultMenu(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -752,11 +756,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437256781.485127"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "encodeWithCoder(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -768,11 +772,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437256781.485127"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "encodeWithCoder(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -780,7 +784,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewDelegate.swift"
@@ -788,7 +792,9 @@
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
-            endingLineNumber = "57">
+            endingLineNumber = "57"
+            landmarkName = "outlineViewSelectionDidChange(_:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -798,11 +804,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437256781.485127"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "encodeWithCoder(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -814,11 +820,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437256781.485127"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "encodeWithCoder(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -830,11 +836,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437256781.485127"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "encodeWithCoder(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -846,11 +852,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "437259626.62576"
+            timestampString = "438726774.16923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "322"
-            endingLineNumber = "322"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "loadConfig()"
             landmarkType = "5">
          </BreakpointContent>
@@ -862,13 +868,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437259313.916193"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
-            landmarkName = "print(_:)"
-            landmarkType = "5">
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "ConnectionViewItem"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -878,45 +884,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437256781.485127"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
-            landmarkName = "loadWithCoder(coder:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ConnectionViewItem.swift"
-            timestampString = "437258005.097529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
-            landmarkName = "loadWithCoder(coder:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ConnectionViewItem.swift"
-            timestampString = "437258143.559581"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "100"
             endingLineNumber = "100"
+            landmarkName = "encodeWithCoder(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ConnectionViewItem.swift"
+            timestampString = "438811657.013989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
             landmarkName = "loadWithCoder(coder:)"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ConnectionViewItem.swift"
+            timestampString = "438811657.013989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "ConnectionViewItem"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -926,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "437259626.62576"
+            timestampString = "438726774.16923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
+            startingLineNumber = "322"
+            endingLineNumber = "322"
             landmarkName = "loadConfig()"
             landmarkType = "5">
          </BreakpointContent>
@@ -961,11 +967,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "437259313.916193"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "130"
+            endingLineNumber = "130"
             landmarkName = "loadWithCoder(coder:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -977,12 +983,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "438720106.321034"
+            timestampString = "438726774.16923"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "309"
-            endingLineNumber = "309"
-            landmarkName = "loadConfig()"
+            startingLineNumber = "312"
+            endingLineNumber = "312"
+            landmarkName = "ConnectionView"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ConnectionViewItem.swift"
+            timestampString = "438811657.013989"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "loadWithCoder(coder:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -993,12 +1015,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewItem.swift"
-            timestampString = "438721030.889799"
+            timestampString = "438811657.013989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "loadWithCoder(coder:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ConnectionViewDataSource.swift"
+            timestampString = "438723458.348451"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "init()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ConnectionViewDataSource.swift"
+            timestampString = "438726862.126952"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "del_Item(_:name:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1008,13 +1062,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ConnectionViewItem.swift"
-            timestampString = "438721702.585853"
+            filePath = "ConnectionView.swift"
+            timestampString = "438726859.45668"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
-            landmarkName = "loadWithCoder(coder:)"
+            startingLineNumber = "309"
+            endingLineNumber = "309"
+            landmarkName = "deleteConn()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1025,12 +1079,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewDataSource.swift"
-            timestampString = "438723458.348451"
+            timestampString = "438809952.785245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "init()"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "del_Item(_:name:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -26,5 +26,16 @@
             </PersistentString>
          </PersistentStrings>
       </ContextState>
+      <ContextState
+         contextName = "iTerm2.ConnectionView.deleteConn (iTerm2.ConnectionView)() -&gt; ():ConnectionView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "iTerm2.ConnectionViewDataSource.(del_Item in _382C70E8645785C80CB46017817906BA) (iTerm2.ConnectionViewDataSource)(iTerm2.ConnectionViewItem, name : ObjectiveC.NSString) -&gt; ():ConnectionViewDataSource.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(iTerm2.ConnectionViewItem)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>

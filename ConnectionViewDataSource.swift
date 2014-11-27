@@ -54,6 +54,23 @@ class ConnectionViewDataSource: NSObject, NSOutlineViewDataSource
             root1.icon = NSImage(named: "folder_icon")
         }
     }
+    
+    func deleteItem(var item:ConnectionViewItem)
+    {
+        del_Item((item as ConnectionViewItem), name: item.name)
+    }
+    
+    private func del_Item(var item:ConnectionViewItem, var name:NSString)
+    {
+        if ((item as ConnectionViewItem).name == name) {
+               (item as ConnectionViewItem).deleteItem(item)
+        }
+        
+        for child in (item as ConnectionViewItem).children
+        {
+               del_Item((child as ConnectionViewItem), name: name)
+        }
+    }
 
     func printItem(item:ConnectionViewItem)
     {
