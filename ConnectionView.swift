@@ -257,49 +257,75 @@ public class ConnectionView: NSOutlineView
             return nil;
         }
          var theMenu = NSMenu(title: "Gigel");
-
+        
+        var curIdx = 0
         var item1:NSMenuItem? = nil;
         var item2:NSMenuItem? = nil;
         var item3:NSMenuItem? = nil;
         var item4:NSMenuItem? = nil;
         var delItem:NSMenuItem? = nil
+        var connectItem:NSMenuItem? = nil
 
         var saveConfigItem:NSMenuItem? = nil
         var loadConfigItem:NSMenuItem? = nil
         
         var item:ConnectionViewItem = self.itemAtRow(row) as ConnectionViewItem
+        item1 = theMenu.insertItemWithTitle("Add connection", action:"addConn", keyEquivalent:"", atIndex:curIdx++)
+        item3 = theMenu.insertItemWithTitle("Add folder", action:"addFolder", keyEquivalent:"", atIndex:curIdx++)
         
-        item1 = theMenu.insertItemWithTitle("Add connection", action:"addConn", keyEquivalent:"", atIndex:0)
-
-
-        item3 = theMenu.insertItemWithTitle("Add folder", action:"addFolder", keyEquivalent:"", atIndex:1)
         
         
         if (item.folder == false) {
-            item2 = theMenu.insertItemWithTitle("Edit connection", action:"editConn", keyEquivalent:"", atIndex:2)
-            delItem = theMenu.insertItemWithTitle("Delete connection", action: "deleteConn", keyEquivalent: "", atIndex: 3)
+            item2 = theMenu.insertItemWithTitle("Edit connection", action:"editConn", keyEquivalent:"", atIndex:curIdx++)
+            delItem = theMenu.insertItemWithTitle("Delete connection", action: "deleteConn", keyEquivalent: "", atIndex: curIdx++)
         }
 
         else {
-            item4 = theMenu.insertItemWithTitle("Edit folder", action:"editFolder", keyEquivalent:"", atIndex:2)
-            delItem = theMenu.insertItemWithTitle("Delete folder", action: "deleteConn", keyEquivalent: "", atIndex: 3)
+            
+            if (item.children.count > 0) {
+                connectItem = theMenu.insertItemWithTitle("Connect", action: "connectAll", keyEquivalent: "", atIndex: curIdx++)
+            }
+            
+            item4 = theMenu.insertItemWithTitle("Edit folder", action:"editFolder", keyEquivalent:"", atIndex:curIdx++)
+            delItem = theMenu.insertItemWithTitle("Delete folder", action: "deleteConn", keyEquivalent: "", atIndex: curIdx++)
+
         }
         
-        saveConfigItem = theMenu.insertItemWithTitle("Save config", action:"saveConfig", keyEquivalent:"", atIndex:4)
-        loadConfigItem = theMenu.insertItemWithTitle("Load config", action:"loadConfig", keyEquivalent:"", atIndex:5)
+        saveConfigItem = theMenu.insertItemWithTitle("Save config", action:"saveConfig", keyEquivalent:"", atIndex:curIdx++)
+        loadConfigItem = theMenu.insertItemWithTitle("Load config", action:"loadConfig", keyEquivalent:"", atIndex:curIdx++)
 
     //item1!.target = self;
      //   item2!.target = self;
       //  item3!.target = self;
         
         self.name_clicked = item.name;
+        
+        self.citem = item
+        /*
+        
         self.citem.name = item.name;
         self.citem.user = item.user;
         self.citem.port = item.port;
         self.citem.key = item.key;
-       
+  */
         
         return theMenu;
+    }
+    
+    func connectAll()
+    {
+        for child in self.citem.children {
+            let child = (child as ConnectionViewItem)
+            if (child.folder == true) {
+                    continue
+            }
+            var deleg = self.delegate();
+            var children = ((deleg as ConnectionViewDelegate)).connWindow.childWindows
+            var pt = children![0] as PTYWindow
+            var term = pt.getPseudoRef()
+            
+            openSSHConnection(child, term)
+        }
     }
     
     func deleteConn()

@@ -198,7 +198,7 @@ class ConnectionViewItem: NSObject, NSCoding
     func deleteItem(var item:ConnectionViewItem)
     {
         if (self.name == item.name) {
-            self.parent!.children.removeObject(item)
+            self.parent?.children.removeObject(item)
             self.parent = nil
 
             return
@@ -213,10 +213,10 @@ class ConnectionViewItem: NSObject, NSCoding
         println("add conviewitem \(name)")
         var child = ConnectionViewItem()
         child.name = name
-        child.user = "florin"
-        child.port = "1986"
+        child.user = user
+        child.port = port
      
-        child.key = "/var/www/mykey.pem"
+        child.key = key
         child.parent = self
         child.parent!.icon = NSImage(named: "folder_icon")
         child.parent!.folder = true

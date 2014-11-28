@@ -25,3 +25,20 @@ func getMyPath() -> NSString
     var myPath:NSString = NSFileManager.defaultManager().currentDirectoryPath
     return myPath
 }
+
+func openSSHConnection(var selectedItem:ConnectionViewItem, var term:PseudoTerminal)
+{
+    if selectedItem.folder == true {
+        return
+    }
+    
+    // [[iTermController sharedInstance] refreshSoftwareUpdateUserDefaults];
+    
+    var ssh_host:NSString = "ssh://" + selectedItem.user + "@" +  selectedItem.name + ":" + selectedItem.port;
+    
+    
+    var controller = iTermController.sharedInstance();
+    
+    controller.launchBookmark(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: nil);
+
+}

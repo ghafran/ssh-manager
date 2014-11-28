@@ -60,26 +60,13 @@ public class ConnectionViewDelegate : NSObject,NSOutlineViewDelegate
         
         var selectedItem = mView.itemAtRow(mView.selectedRow) as ConnectionViewItem!
 
-        if selectedItem.folder == true {
-            return
-        }
         
-        println("Selected host: " + host);
-        
-       // [[iTermController sharedInstance] refreshSoftwareUpdateUserDefaults];
-        
-        var ssh_host:NSString = "ssh://" + selectedItem.user + "@" +  selectedItem.name + ":" + selectedItem.port;
-        
-        
-        var controller = iTermController.sharedInstance();
-        
-    
         var children = connWindow.childWindows
         
         var pt = children![0] as PTYWindow
         var term = pt.getPseudoRef()
         
-        controller.launchBookmark(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: nil);
+        openSSHConnection(selectedItem, term)
         
         /*
             - (id)launchBookmark:(NSDictionary *)bookmarkData
