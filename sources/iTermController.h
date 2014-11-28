@@ -107,6 +107,12 @@
            openAllSelector:(SEL)openAllSelector
                 startingAt:(int)startingAt;
 - (PseudoTerminal *)openWindow;
+- (id)launchWithSSH_Key:(NSDictionary *)bookmarkData
+              inTerminal:(PseudoTerminal *)theTerm
+                 withURL:(NSString *)url
+                isHotkey:(BOOL)isHotkey
+                 makeKey:(BOOL)makeKey
+                 command:(NSString *)command;
 - (id)launchBookmark:(NSDictionary *)bookmarkData
           inTerminal:(PseudoTerminal *)theTerm
              withURL:(NSString *)url

@@ -51,6 +51,8 @@
 #import "iTermPreferences.h"
 #import "iTermRestorableSession.h"
 #import "iTermWarning.h"
+#import "ITAddressBookMgr.h"
+
 #include <objc/runtime.h>
 
 @interface NSApplication (Undocumented)
@@ -1077,6 +1079,7 @@ static BOOL initDone = NO;
 
         if ([urlType compare:@"ssh" options:NSCaseInsensitiveSearch] == NSOrderedSame) {
             NSMutableString *tempString = [NSMutableString stringWithString:@"ssh "];
+            
             if ([urlRep user]) {
                 [tempString appendFormat:@"-l %@ ", [urlRep user]];
             }
@@ -1086,6 +1089,7 @@ static BOOL initDone = NO;
             if ([urlRep host]) {
                 [tempString appendString:[urlRep host]];
             }
+            
             [tempDict setObject:tempString forKey:KEY_COMMAND];
             [tempDict setObject:@"Yes" forKey:KEY_CUSTOM_COMMAND];
             aDict = tempDict;
@@ -1115,6 +1119,17 @@ static BOOL initDone = NO;
     return aDict;
 }
 
+- (id)launchWithSSH_Key:(NSDictionary *)bookmarkData
+inTerminal:(PseudoTerminal *)theTerm
+withURL:(NSString *)url
+isHotkey:(BOOL)isHotkey
+makeKey:(BOOL)makeKey
+command:(NSString *)command {
+    
+    return [self launchBookmark:bookmarkData inTerminal:theTerm withURL:url isHotkey:isHotkey makeKey: makeKey command: command];
+    
+}
+
 - (id)launchBookmark:(NSDictionary *)bookmarkData
           inTerminal:(PseudoTerminal *)theTerm
              withURL:(NSString *)url
@@ -1136,6 +1151,14 @@ static BOOL initDone = NO;
     if (url) {
         // Automatically fill in ssh command if command is exactly equal to $$ or it's a login shell.
         aDict = [self profile:aDict modifiedToOpenURL:url forObjectType:objectType];
+        if (command != nil) { //we can only be in this case (both command and url non nil when being called from launchWithSSH_Key)
+            NSMutableString *myCommand = [aDict objectForKey: @"Command"];
+            [myCommand appendFormat:@" -i %@ ", command];
+        
+            [(NSMutableDictionary*)aDict setObject:myCommand forKey:@"Command"];
+            printf("My command: %s\n", myCommand.cString);
+            command = nil;
+        }
     }
     if (theTerm && [[aDict objectForKey:KEY_PREVENT_TAB] boolValue]) {
         theTerm = nil;

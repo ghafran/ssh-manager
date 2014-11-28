@@ -34,11 +34,16 @@ func openSSHConnection(var selectedItem:ConnectionViewItem, var term:PseudoTermi
     
     // [[iTermController sharedInstance] refreshSoftwareUpdateUserDefaults];
     
-    var ssh_host:NSString = "ssh://" + selectedItem.user + "@" +  selectedItem.name + ":" + selectedItem.port;
-    
+    var ssh_host:NSString = "ssh://" + selectedItem.user + "@" +  selectedItem.name + ":" + selectedItem.port
     
     var controller = iTermController.sharedInstance();
     
-    controller.launchBookmark(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: nil);
+    selectedItem.key = selectedItem.key.stringByReplacingOccurrencesOfString(" ", withString:"");
 
+    if (selectedItem.key != "") {
+        controller.launchWithSSH_Key(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: selectedItem.key);
+    }
+    else {
+        controller.launchBookmark(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: nil);
+    }
 }
