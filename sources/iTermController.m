@@ -382,6 +382,36 @@ static BOOL initDone = NO;
     }
 }
 
+- (void)saveTabArrangement:(NSString*)name {
+    if (!name) {
+        return;
+    }
+    PseudoTerminal *currentTerminal = [self currentTerminal];
+    if (!currentTerminal) {
+        return;
+    }
+    
+    NSMutableArray* tabArrangement = [NSMutableArray arrayWithCapacity:1];
+    
+    [tabArrangement addObject:[currentTerminal tabArrangement]];
+    [WindowArrangements setArrangement:tabArrangement withName:name];
+}
+
+- (void)saveAllTabsArrangementForOneServer: (NSString*)name {
+    PseudoTerminal *currentTerminal = [self currentTerminal];
+    if (!currentTerminal) {
+        return;
+    }
+    
+    //this is for the multiple tabs, one server mode
+    
+    NSMutableArray* tabArrangement = [NSMutableArray arrayWithCapacity: 1];
+    
+    [tabArrangement addObject:[currentTerminal tabArrangement]];
+    [WindowArrangements setArrangement:tabArrangement withName:name];
+}
+
+
 - (void)saveWindowArrangement:(BOOL)allWindows {
     NSString *name = [self _showAlertWithText:@"Name for saved window arrangement:"
                                  defaultInput:[NSString stringWithFormat:@"Arrangement %d", 1+[WindowArrangements count]]];
@@ -412,6 +442,16 @@ static BOOL initDone = NO;
         [terminalArrangements addObject:[currentTerminal arrangement]];
     }
     [WindowArrangements setArrangement:terminalArrangements withName:name];
+}
+
+- (void)replaceWindowArrangementWithName:(NSString*)theName
+{
+    NSArray* terminalArrangements = [WindowArrangements arrangementWithName:theName];
+    if (terminalArrangements) {
+        for (NSDictionary* terminalArrangement in terminalArrangements) {
+            [self.currentTerminal loadArrangement: terminalArrangement];
+        }
+    }
 }
 
 - (void)loadWindowArrangementWithName:(NSString *)theName

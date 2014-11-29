@@ -202,11 +202,27 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/PseudoTerminal.m"
-            timestampString = "437135136.646465"
+            timestampString = "438950105.198073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3129"
-            endingLineNumber = "3129"
+            startingLineNumber = "3144"
+            endingLineNumber = "3144"
+            landmarkName = "-saveTmuxWindowOrigins"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sources/PseudoTerminal.m"
+            timestampString = "438950105.198073"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "3154"
+            endingLineNumber = "3154"
             landmarkName = "-windowDidResize:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +234,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/PseudoTerminal.m"
-            timestampString = "437135136.646465"
+            timestampString = "438950105.198073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3139"
-            endingLineNumber = "3139"
+            startingLineNumber = "3157"
+            endingLineNumber = "3157"
             landmarkName = "-windowDidResize:"
             landmarkType = "5">
          </BreakpointContent>
@@ -234,28 +250,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/PseudoTerminal.m"
-            timestampString = "437135136.646465"
+            timestampString = "438950105.198073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "3142"
-            endingLineNumber = "3142"
-            landmarkName = "-windowDidResize:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "sources/PseudoTerminal.m"
-            timestampString = "437135136.646465"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "5471"
-            endingLineNumber = "5471"
-            landmarkName = "-appendTab:"
+            startingLineNumber = "5486"
+            endingLineNumber = "5486"
+            landmarkName = "-minWidth"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -340,11 +340,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885197.592599"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1156"
-            endingLineNumber = "1156"
+            startingLineNumber = "1182"
+            endingLineNumber = "1182"
             landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
@@ -356,11 +356,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885418.290153"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1210"
-            endingLineNumber = "1210"
+            startingLineNumber = "1236"
+            endingLineNumber = "1236"
             landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
@@ -372,12 +372,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885197.592599"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1140"
-            endingLineNumber = "1140"
-            landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
+            startingLineNumber = "1166"
+            endingLineNumber = "1166"
+            landmarkName = "-launchWithSSH_Key:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -388,12 +388,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438884468.038035"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1062"
-            endingLineNumber = "1062"
-            landmarkName = "-profile:modifiedToOpenURL:forObjectType:"
+            startingLineNumber = "1088"
+            endingLineNumber = "1088"
+            landmarkName = "-launchBookmark:inTerminal:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -404,12 +404,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438884468.038035"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1065"
-            endingLineNumber = "1065"
-            landmarkName = "-profile:modifiedToOpenURL:forObjectType:"
+            startingLineNumber = "1091"
+            endingLineNumber = "1091"
+            landmarkName = "-launchBookmark:inTerminal:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -420,12 +420,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/PseudoTerminal.m"
-            timestampString = "437135136.646465"
+            timestampString = "438950105.198073"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "7236"
-            endingLineNumber = "7236"
-            landmarkName = "-createSessionWithProfile:withURL:forObjectType:"
+            startingLineNumber = "7251"
+            endingLineNumber = "7251"
+            landmarkName = "-window:willEncodeRestorableState:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -484,11 +484,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885418.290153"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1211"
-            endingLineNumber = "1211"
+            startingLineNumber = "1237"
+            endingLineNumber = "1237"
             landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
@@ -500,11 +500,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "438878757.73475"
+            timestampString = "438963066.232178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "370"
-            endingLineNumber = "370"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
             landmarkName = "addConn()"
             landmarkType = "5">
          </BreakpointContent>
@@ -516,11 +516,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "438878757.73475"
+            timestampString = "438963066.232178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "371"
-            endingLineNumber = "371"
+            startingLineNumber = "374"
+            endingLineNumber = "374"
             landmarkName = "addConn()"
             landmarkType = "5">
          </BreakpointContent>
@@ -852,11 +852,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "438878757.73475"
+            timestampString = "438963066.232178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "351"
-            endingLineNumber = "351"
+            startingLineNumber = "354"
+            endingLineNumber = "354"
             landmarkName = "loadConfig()"
             landmarkType = "5">
          </BreakpointContent>
@@ -932,11 +932,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionView.swift"
-            timestampString = "438878757.73475"
+            timestampString = "438963066.232178"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "348"
-            endingLineNumber = "348"
+            startingLineNumber = "351"
+            endingLineNumber = "351"
             landmarkName = "loadConfig()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1111,11 +1111,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885197.592599"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1155"
-            endingLineNumber = "1155"
+            startingLineNumber = "1181"
+            endingLineNumber = "1181"
             landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1127,11 +1127,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885418.290153"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1158"
-            endingLineNumber = "1158"
+            startingLineNumber = "1184"
+            endingLineNumber = "1184"
             landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1143,11 +1143,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "sources/iTermController.m"
-            timestampString = "438885418.290153"
+            timestampString = "438962882.617812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1162"
-            endingLineNumber = "1162"
+            startingLineNumber = "1188"
+            endingLineNumber = "1188"
             landmarkName = "-launchBookmark:inTerminal:withURL:isHotkey:makeKey:command:"
             landmarkType = "5">
          </BreakpointContent>
@@ -1182,6 +1182,22 @@
             endingLineNumber = "41"
             landmarkName = "openSSHConnection(_:_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "sources/PseudoTerminal.m"
+            timestampString = "438898625.697046"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2207"
+            endingLineNumber = "2207"
+            landmarkName = "-docommonArrangements:::"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

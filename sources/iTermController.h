@@ -87,6 +87,8 @@
 - (BOOL)haveTmuxConnection;
 - (PTYSession *)anyTmuxSession;
 
+- (void)saveAllTabsArrangementForOneServer: (NSString*)name;
+
 - (int)keyWindowIndexMemo;
 - (void)setKeyWindowIndexMemo:(int)i;
 
@@ -94,8 +96,10 @@
 - (PseudoTerminal *)terminalWithGuid:(NSString *)guid;
 - (int)allocateWindowNumber;
 
+- (void)saveTabArrangement:(NSString*)name;
 - (void)saveWindowArrangement:(BOOL)allWindows;
 - (void)loadWindowArrangementWithName:(NSString *)theName;
+- (void)replaceWindowArrangementWithName:(NSString*)theName;
 
 - (PTYSession *)sessionWithMostRecentSelection;
 

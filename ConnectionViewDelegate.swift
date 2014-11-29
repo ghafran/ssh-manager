@@ -66,7 +66,13 @@ public class ConnectionViewDelegate : NSObject,NSOutlineViewDelegate
         var pt = children![0] as PTYWindow
         var term = pt.getPseudoRef()
         
-        openSSHConnection(selectedItem, term)
+        //iTermController.sharedInstance().saveAllTabsArrangementForOneServer(selectedItem.name + "?lay.conf")
+       // iTermController.sharedInstance().loadWindowArrangementWithName(selectedItem.name + "?lay.conf")
+        
+        iTermController.sharedInstance().replaceWindowArrangementWithName(selectedItem.name + "?lay.conf")
+        
+        
+       // openSSHConnection(selectedItem, term)
         
         /*
             - (id)launchBookmark:(NSDictionary *)bookmarkData

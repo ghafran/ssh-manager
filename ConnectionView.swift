@@ -340,6 +340,9 @@ public class ConnectionView: NSOutlineView
         var ds:ConnectionViewDataSource = self.dataSource() as ConnectionViewDataSource
         ConnectionHolder.curIdx = 0
         NSKeyedArchiver.archiveRootObject(ds.items, toFile:"sshtree.drt")
+      //  iTermController.sharedInstance().saveTabArrangement()(false)
+        iTermController.sharedInstance().saveAllTabsArrangementForOneServer(self.citem.name + "?lay.conf")
+
     }
 
     func loadConfig() {

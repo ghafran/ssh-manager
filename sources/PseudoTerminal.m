@@ -2204,6 +2204,58 @@ static const CGFloat kHorizontalTabBarHeight = 22;
     return YES;
 }
 
+- (void) docommonArrangements: (NSMutableDictionary**)result:(BOOL)excludeTmux:(BOOL)allTabs
+{
+    [*result setObject:[NSNumber numberWithInt:([self lionFullScreen] ? WINDOW_TYPE_LION_FULL_SCREEN : windowType_)]
+               forKey:TERMINAL_ARRANGEMENT_WINDOW_TYPE];
+    (*result)[TERMINAL_ARRANGEMENT_SAVED_WINDOW_TYPE] = @(savedWindowType_);
+    [*result setObject:[NSNumber numberWithInt:[[NSScreen screens] indexOfObjectIdenticalTo:[[self window] screen]]]
+               forKey:TERMINAL_ARRANGEMENT_SCREEN_INDEX];
+    [*result setObject:[NSNumber numberWithInt:desiredRows_]
+               forKey:TERMINAL_ARRANGEMENT_DESIRED_ROWS];
+    [*result setObject:[NSNumber numberWithInt:desiredColumns_]
+               forKey:TERMINAL_ARRANGEMENT_DESIRED_COLUMNS];
+    // Save tabs.
+    NSMutableArray* tabs =  nil;
+    
+    if (allTabs == false) {
+        tabs = [NSMutableArray arrayWithCapacity:1];
+        NSTabViewItem* tabViewItem = [TABVIEW selectedTabViewItem];
+        PTYTab *theTab = [tabViewItem identifier];
+        if ([[theTab sessions] count]) {
+            if (!excludeTmux || ![theTab isTmuxTab]) {
+                [tabs addObject:[[tabViewItem identifier] arrangement]];
+            }
+        }
+    }
+    
+    else {
+        tabs = [NSMutableArray arrayWithCapacity:[self numberOfTabs]];
+        for (NSTabViewItem* tabViewItem in [TABVIEW tabViewItems]) {
+            PTYTab *theTab = [tabViewItem identifier];
+            if ([[theTab sessions] count]) {
+                if (!excludeTmux || ![theTab isTmuxTab]) {
+                    [tabs addObject:[[tabViewItem identifier] arrangement]];
+                }
+            }
+        }
+    }
+    
+    if ([tabs count] == 0) {
+        //return nil;
+    }
+    [*result setObject:tabs forKey:TERMINAL_ARRANGEMENT_TABS];
+    
+    // Save index of selected tab.
+    [*result setObject:[NSNumber numberWithInt:[TABVIEW indexOfTabViewItem:[TABVIEW selectedTabViewItem]]]
+               forKey:TERMINAL_ARRANGEMENT_SELECTED_TAB_INDEX];
+    [*result setObject:[NSNumber numberWithBool:hideAfterOpening_]
+               forKey:TERMINAL_ARRANGEMENT_HIDE_AFTER_OPENING];
+    
+    (*result)[TERMINAL_ARRANGEMENT_IS_HOTKEY_WINDOW] = @(_isHotKeyWindow);
+
+}
+
 - (NSDictionary *)arrangementExcludingTmuxTabs:(BOOL)excludeTmux
 {
     NSMutableDictionary* result = [NSMutableDictionary dictionaryWithCapacity:7];
@@ -2241,45 +2293,20 @@ static const CGFloat kHorizontalTabBarHeight = 22;
         [result setObject:[NSNumber numberWithDouble:oldFrame_.size.height]
                    forKey:TERMINAL_ARRANGEMENT_OLD_HEIGHT];
     }
-
-    [result setObject:[NSNumber numberWithInt:([self lionFullScreen] ? WINDOW_TYPE_LION_FULL_SCREEN : windowType_)]
-               forKey:TERMINAL_ARRANGEMENT_WINDOW_TYPE];
-    result[TERMINAL_ARRANGEMENT_SAVED_WINDOW_TYPE] = @(savedWindowType_);
-    [result setObject:[NSNumber numberWithInt:[[NSScreen screens] indexOfObjectIdenticalTo:[[self window] screen]]]
-                                       forKey:TERMINAL_ARRANGEMENT_SCREEN_INDEX];
-    [result setObject:[NSNumber numberWithInt:desiredRows_]
-               forKey:TERMINAL_ARRANGEMENT_DESIRED_ROWS];
-    [result setObject:[NSNumber numberWithInt:desiredColumns_]
-               forKey:TERMINAL_ARRANGEMENT_DESIRED_COLUMNS];
-    // Save tabs.
-    NSMutableArray* tabs = [NSMutableArray arrayWithCapacity:[self numberOfTabs]];
-    for (NSTabViewItem* tabViewItem in [TABVIEW tabViewItems]) {
-        PTYTab *theTab = [tabViewItem identifier];
-        if ([[theTab sessions] count]) {
-            if (!excludeTmux || ![theTab isTmuxTab]) {
-                [tabs addObject:[[tabViewItem identifier] arrangement]];
-            }
-        }
-    }
-    if ([tabs count] == 0) {
-        return nil;
-    }
-    [result setObject:tabs forKey:TERMINAL_ARRANGEMENT_TABS];
-
-    // Save index of selected tab.
-    [result setObject:[NSNumber numberWithInt:[TABVIEW indexOfTabViewItem:[TABVIEW selectedTabViewItem]]]
-               forKey:TERMINAL_ARRANGEMENT_SELECTED_TAB_INDEX];
-    [result setObject:[NSNumber numberWithBool:hideAfterOpening_]
-               forKey:TERMINAL_ARRANGEMENT_HIDE_AFTER_OPENING];
-
-    result[TERMINAL_ARRANGEMENT_IS_HOTKEY_WINDOW] = @(_isHotKeyWindow);
-
+    [self docommonArrangements:&result :excludeTmux :true];
     return result;
 }
 
 - (NSDictionary*)arrangement
 {
     return [self arrangementExcludingTmuxTabs:YES];
+}
+
+- (NSDictionary*) tabArrangement
+{
+    NSMutableDictionary* result = [NSMutableDictionary dictionaryWithCapacity:7];
+    [self docommonArrangements:&result :YES :false];
+    return result;
 }
 
 // NSWindow delegate methods

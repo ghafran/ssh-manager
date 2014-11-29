@@ -234,6 +234,9 @@ extern NSString *const kCurrentSessionDidChange;
 // Changes how input is broadcast.
 - (void)setBroadcastMode:(BroadcastMode)mode;
 
+- (NSDictionary*) tabArrangement ;
+- (void) docommonArrangements: (NSMutableDictionary**)result:(BOOL)excludeTmux:(BOOL)allTabs;
+
 // Change split selection mode for all sessions in this window.
 - (void)setSplitSelectionMode:(BOOL)mode excludingSession:(PTYSession *)session move:(BOOL)move;
 
