@@ -231,6 +231,9 @@ extern NSString *const kCurrentSessionDidChange;
 // etc.) change.
 - (void)screenParametersDidChange;
 
+// Changes how input is broadcast, no dialog
+- (void)setSilentBroadcastMode:(BroadcastMode)mode;
+
 // Changes how input is broadcast.
 - (void)setBroadcastMode:(BroadcastMode)mode;
 

@@ -1666,13 +1666,27 @@ static const CGFloat kHorizontalTabBarHeight = 22;
 {
     printf("pseudoTerminal sendInputToAllSessions...\n");
     
+    //TODO TEST ONLY
+    
+    /*
     for (PTYSession *aSession in [self broadcastSessions]) {
-        if ([aSession isTmuxClient]) {
+         if ([aSession isTmuxClient]) {
             [aSession writeTaskNoBroadcast:data];
         } else if (![aSession isTmuxGateway]) {
             [aSession.shell writeTask:data];
         }
+    }*/
+    
+    
+    PTYSession * aSession =  [[self broadcastSessions] objectAtIndex: 1];
+    
+    //PTYSession *aSession = [self broadcastSessions [objectAtIndex: [self broadcastSessions].count-1] ];
+    if ([aSession isTmuxClient]) {
+        [aSession writeTaskNoBroadcast:data];
+    } else if (![aSession isTmuxGateway]) {
+        [aSession.shell writeTask:data];
     }
+   
 }
 
 - (BOOL)broadcastInputToSession:(PTYSession *)session
@@ -5608,18 +5622,25 @@ static const CGFloat kHorizontalTabBarHeight = 22;
         }
 }
 
-- (void) setBroadcastModeAllNoDialog:(BroadcastMode)mode
+
+- (void)setSilentBroadcastMode:(BroadcastMode)mode
 {
+    if (mode != BROADCAST_CUSTOM && mode == [self broadcastMode]) {
+        mode = BROADCAST_OFF;
+    }
     if (mode == BROADCAST_TO_ALL_PANES) {
         [[self currentTab] setBroadcasting:YES];
         mode = BROADCAST_OFF;
+    } else {
+        [[self currentTab] setBroadcasting:NO];
     }
+    
     broadcastMode_ = mode;
     [self setDimmingForSessions];
     iTermApplicationDelegate *itad = (iTermApplicationDelegate *)[[iTermApplication sharedApplication] delegate];
     [itad updateBroadcastMenuState];
-    
 }
+    
 
 - (void)setBroadcastMode:(BroadcastMode)mode
 {

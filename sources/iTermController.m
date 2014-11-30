@@ -52,6 +52,7 @@
 #import "iTermRestorableSession.h"
 #import "iTermWarning.h"
 #import "ITAddressBookMgr.h"
+#import "PTYSession.h"
 
 #include <objc/runtime.h>
 
@@ -444,12 +445,25 @@ static BOOL initDone = NO;
     [WindowArrangements setArrangement:terminalArrangements withName:name];
 }
 
-- (void)replaceWindowArrangementWithName:(NSString*)theName
+- (void)replaceWindowArrangementWithName:(NSString*)theName :(NSString*)connStr
 {
     NSArray* terminalArrangements = [WindowArrangements arrangementWithName:theName];
     if (terminalArrangements) {
         for (NSDictionary* terminalArrangement in terminalArrangements) {
             [self.currentTerminal loadArrangement: terminalArrangement];
+
+            NSString *str = connStr;
+            str  = [str stringByAppendingString: @"\n"];
+            NSData* data = [str dataUsingEncoding:NSUTF8StringEncoding];
+       
+            
+            NSArray* tabs = [[self currentTerminal] tabs];
+            PTYTab *tab = tabs[tabs.count-1];
+            
+            for (PTYSession* session in [tab sessions]) {
+                [session writeTask: data];
+            }
+
         }
     }
 }
@@ -462,6 +476,8 @@ static BOOL initDone = NO;
             PseudoTerminal* term = [PseudoTerminal terminalWithArrangement:terminalArrangement];
             if (term) {
                 [self addTerminalWindow:term];
+                
+                
             }
         }
     }

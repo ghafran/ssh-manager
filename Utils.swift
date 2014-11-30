@@ -47,3 +47,17 @@ func openSSHConnection(var selectedItem:ConnectionViewItem, var term:PseudoTermi
         controller.launchBookmark(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: nil);
     }
 }
+
+public func openSSHConnection(var ssh_host:NSString, var key:NSString, var term:PseudoTerminal)
+{
+    var controller = iTermController.sharedInstance();
+    
+    key = key.stringByReplacingOccurrencesOfString(" ", withString:"");
+    
+    if (key != "") {
+        controller.launchWithSSH_Key(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: key);
+    }
+    else {
+        controller.launchBookmark(nil, inTerminal: term, withURL: ssh_host, isHotkey: false, makeKey: false, command: nil);
+    }
+}

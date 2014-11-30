@@ -69,10 +69,15 @@ public class ConnectionViewDelegate : NSObject,NSOutlineViewDelegate
         //iTermController.sharedInstance().saveAllTabsArrangementForOneServer(selectedItem.name + "?lay.conf")
        // iTermController.sharedInstance().loadWindowArrangementWithName(selectedItem.name + "?lay.conf")
         
-        iTermController.sharedInstance().replaceWindowArrangementWithName(selectedItem.name + "?lay.conf")
+        var ssh = "ssh " + selectedItem.user + "@" + selectedItem.name + " -p " + selectedItem.port;
+        if ( selectedItem.key  != "" ) {
+            ssh = ssh + " -i " + selectedItem.key;
+        }
+        
+    iTermController.sharedInstance().replaceWindowArrangementWithName(selectedItem.name + "?lay.conf", ssh)
         
         
-       // openSSHConnection(selectedItem, term)
+      //  openSSHConnection(selectedItem, term)
         
         /*
             - (id)launchBookmark:(NSDictionary *)bookmarkData

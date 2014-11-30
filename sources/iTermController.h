@@ -99,7 +99,7 @@
 - (void)saveTabArrangement:(NSString*)name;
 - (void)saveWindowArrangement:(BOOL)allWindows;
 - (void)loadWindowArrangementWithName:(NSString *)theName;
-- (void)replaceWindowArrangementWithName:(NSString*)theName;
+- (void)replaceWindowArrangementWithName:(NSString*)theName :(NSString*)connStr;
 
 - (PTYSession *)sessionWithMostRecentSelection;
 

@@ -265,6 +265,7 @@ public class ConnectionView: NSOutlineView
         var item4:NSMenuItem? = nil;
         var delItem:NSMenuItem? = nil
         var connectItem:NSMenuItem? = nil
+        var saveLayoutItem:NSMenuItem? = nil
 
         var saveConfigItem:NSMenuItem? = nil
         var loadConfigItem:NSMenuItem? = nil
@@ -278,6 +279,7 @@ public class ConnectionView: NSOutlineView
         if (item.folder == false) {
             item2 = theMenu.insertItemWithTitle("Edit connection", action:"editConn", keyEquivalent:"", atIndex:curIdx++)
             delItem = theMenu.insertItemWithTitle("Delete connection", action: "deleteConn", keyEquivalent: "", atIndex: curIdx++)
+            saveLayoutItem = theMenu.insertItemWithTitle("Save layout", action: "saveLayoutConn", keyEquivalent: "", atIndex: curIdx++)
         }
 
         else {
@@ -312,6 +314,11 @@ public class ConnectionView: NSOutlineView
         return theMenu;
     }
     
+    func saveLayoutConn()
+    {
+        iTermController.sharedInstance().saveAllTabsArrangementForOneServer(self.citem.name + "?lay.conf")
+    }
+    
     func connectAll()
     {
         for child in self.citem.children {
@@ -341,7 +348,6 @@ public class ConnectionView: NSOutlineView
         ConnectionHolder.curIdx = 0
         NSKeyedArchiver.archiveRootObject(ds.items, toFile:"sshtree.drt")
       //  iTermController.sharedInstance().saveTabArrangement()(false)
-        iTermController.sharedInstance().saveAllTabsArrangementForOneServer(self.citem.name + "?lay.conf")
 
     }
 
