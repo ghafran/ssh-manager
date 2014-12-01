@@ -1665,7 +1665,6 @@ static const CGFloat kHorizontalTabBarHeight = 22;
     
     //TODO TEST ONLY
     
-    
     for (PTYSession *aSession in [self broadcastSessions]) {
          if ([aSession isTmuxClient]) {
             [aSession writeTaskNoBroadcast:data];
@@ -2982,7 +2981,7 @@ static const CGFloat kHorizontalTabBarHeight = 22;
 
 - (NSSize)windowWillResize:(NSWindow *)sender toSize:(NSSize)proposedFrameSize
 {
-    if (![sender.title  isEqual: @"TreeView1"])
+    if (![sender.title  isEqual: @"iSSHMaster"])
     {
         return [sender frame].size;
     }
@@ -3167,7 +3166,7 @@ static const CGFloat kHorizontalTabBarHeight = 22;
     
     char *winTitle = win.title.cString;
     
-    if ([win.title  isEqual: @"TreeView1"])
+    if ([win.title  isEqual: @"iSSHMaster"])
     {
         [self adjustChildWindowSize];
         return;

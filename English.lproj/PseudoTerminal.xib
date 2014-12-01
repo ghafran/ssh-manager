@@ -129,7 +129,7 @@ Gw
             </comboBoxCell>
             <point key="canvasLocation" x="264" y="356"/>
         </comboBox>
-        <window title="TreeView1" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="IQZ-Ox-xaD">
+        <window title="iSSHMaster" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="IQZ-Ox-xaD">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="793" height="477"/>
