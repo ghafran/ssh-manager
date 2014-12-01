@@ -213,10 +213,6 @@ public class ConnectionView: NSOutlineView
     }
 
     
-    
-
-
-    
  override public func menuForEvent(var evt:NSEvent)-> NSMenu?
     {
         super.menuForEvent(evt);
@@ -245,12 +241,10 @@ public class ConnectionView: NSOutlineView
             self.observers_ok = true;
         }
 
-        
        // NSNotificationCenter.defaultCenter().addObserver(self, selector: "ssh_window_closed", name: "ssh_window_closed", object: self)
 
         return self.defaultMenu(row);
     }
-    
     
     func defaultMenu(var row:Int) -> NSMenu? {
         if (row < 0) {
@@ -274,14 +268,11 @@ public class ConnectionView: NSOutlineView
         item1 = theMenu.insertItemWithTitle("Add connection", action:"addConn", keyEquivalent:"", atIndex:curIdx++)
         item3 = theMenu.insertItemWithTitle("Add folder", action:"addFolder", keyEquivalent:"", atIndex:curIdx++)
         
-        
-        
         if (item.folder == false) {
             item2 = theMenu.insertItemWithTitle("Edit connection", action:"editConn", keyEquivalent:"", atIndex:curIdx++)
             delItem = theMenu.insertItemWithTitle("Delete connection", action: "deleteConn", keyEquivalent: "", atIndex: curIdx++)
             saveLayoutItem = theMenu.insertItemWithTitle("Save layout", action: "saveLayoutConn", keyEquivalent: "", atIndex: curIdx++)
         }
-
         else {
             
             if (item.children.count > 0) {
@@ -292,7 +283,6 @@ public class ConnectionView: NSOutlineView
             delItem = theMenu.insertItemWithTitle("Delete folder", action: "deleteConn", keyEquivalent: "", atIndex: curIdx++)
 
         }
-        
         saveConfigItem = theMenu.insertItemWithTitle("Save config", action:"saveConfig", keyEquivalent:"", atIndex:curIdx++)
         loadConfigItem = theMenu.insertItemWithTitle("Load config", action:"loadConfig", keyEquivalent:"", atIndex:curIdx++)
 

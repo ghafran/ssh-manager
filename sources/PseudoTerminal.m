@@ -637,9 +637,6 @@ static const CGFloat kHorizontalTabBarHeight = 22;
     [myWindow setPseudoRef: self];
     
     [self->treeviewWindow makeKeyAndOrderFront: nil];
-   
-    
-  
     [self->treeviewWindow addChildWindow: myWindow ordered: NSWindowAbove];
     
    // [self->treeviewWindow addChildWindow: self.ssh_window ordered:NSWindowAbove];
@@ -1668,23 +1665,13 @@ static const CGFloat kHorizontalTabBarHeight = 22;
     
     //TODO TEST ONLY
     
-    /*
+    
     for (PTYSession *aSession in [self broadcastSessions]) {
          if ([aSession isTmuxClient]) {
             [aSession writeTaskNoBroadcast:data];
         } else if (![aSession isTmuxGateway]) {
             [aSession.shell writeTask:data];
         }
-    }*/
-    
-    
-    PTYSession * aSession =  [[self broadcastSessions] objectAtIndex: 1];
-    
-    //PTYSession *aSession = [self broadcastSessions [objectAtIndex: [self broadcastSessions].count-1] ];
-    if ([aSession isTmuxClient]) {
-        [aSession writeTaskNoBroadcast:data];
-    } else if (![aSession isTmuxGateway]) {
-        [aSession.shell writeTask:data];
     }
    
 }
