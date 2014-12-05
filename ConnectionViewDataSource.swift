@@ -39,6 +39,16 @@ class ConnectionViewDataSource: NSObject, NSOutlineViewDataSource
                     self.items.addObject(elem as ConnectionViewItem)
                 }
             }
+            else {
+                holder.count = 1
+                
+                var root1 = ConnectionViewItem()
+                root1.name = ""
+                
+                self.items.addObject(root1)
+                root1.folder = true
+                root1.icon = NSImage(named: "folder_icon")
+            }
 
             holder.count = 1
         }

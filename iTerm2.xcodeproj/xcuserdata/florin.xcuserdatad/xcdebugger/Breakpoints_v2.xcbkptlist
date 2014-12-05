@@ -452,11 +452,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewDelegate.swift"
-            timestampString = "438878189.525733"
+            timestampString = "439215614.082377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "outlineViewSelectionDidChange(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -788,11 +788,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConnectionViewDelegate.swift"
-            timestampString = "437152140.347514"
+            timestampString = "439215614.082377"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "outlineViewSelectionDidChange(_:)"
             landmarkType = "5">
          </BreakpointContent>

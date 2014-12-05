@@ -14,22 +14,11 @@ public class ConnectionViewDelegate : NSObject,NSOutlineViewDelegate
     @IBOutlet var mView: NSOutlineView!
     @IBOutlet var connWindow: NSWindow!
   
-    
-    
-    
     override init()
     {
         super.init()
-       // NSNotificationCenter.defaultCenter().addObserver(self, selector: "termWindowCreated:", name:"PseudoTermWindowFinished", object:nil)
     }
     
-/*
-    func termWindowCreated(notification: NSNotification!)
-    {
-        termWindow = notification.object as PseudoTerminal
-    }
-*/
-
     func outlineView(outlineView: NSOutlineView!, viewForTableColumn tableColumn: NSTableColumn!, item: AnyObject!) -> NSView!
     {
         
@@ -74,25 +63,7 @@ public class ConnectionViewDelegate : NSObject,NSOutlineViewDelegate
             ssh = ssh + " -i " + selectedItem.key;
         }
         
-    iTermController.sharedInstance().replaceWindowArrangementWithName(selectedItem.name + "?lay.conf", ssh)
-        
-        
-      //  openSSHConnection(selectedItem, term)
-        
-        /*
-            - (id)launchBookmark:(NSDictionary *)bookmarkData
-          inTerminal:(PseudoTerminal *)theTerm
-             withURL:(NSString *)url
-            isHotkey:(BOOL)isHotkey
-             makeKey:(BOOL)makeKey
-             command:(NSString *)command;
-        */
-            
-        
-    //    iTermController.sharedInstance()launchBookmark(nil, nil, ssh_host, false, false, nil);
-   
-     //   i
-    
+        iTermController.sharedInstance().replaceWindowArrangementWithName(selectedItem.name + "?lay.conf", ssh)
     }
     
 }
